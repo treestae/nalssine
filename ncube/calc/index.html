@@ -6,8 +6,20 @@
     <title>Unity WebGL Player | ncube</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <style>
+    .top-btn {
+      position: fixed;  
+      left: 2%;
+      top: 2%;
+      cursor: pointer;
+      z-index: 99999;
+    }
+    </style>
   </head>
   <body>
+    <span class="top-btn w3-xxlarge" onClick="history.back();"><i class="fas fa-arrow-left"></i></span>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
