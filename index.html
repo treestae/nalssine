@@ -36,9 +36,9 @@
         <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-right f-notosans" id="mySidebar">
           <button class="w3-bar-item w3-button w3-xlarge" style="text-align:right;" onclick="w3_close()">&times;</button>
           <a href="./ncube/calc" class="w3-bar-item w3-button w3-right-align">냥큐브 판 수 계산기</a>
-          <a href="https://smartstore.naver.com/nalssine/products/5618744155" class="w3-bar-item w3-button w3-right-align">아카시아 냥큐브 구매</a>
-          <a href="https://www.wadiz.kr/web/campaign/detail/123654" class="w3-bar-item w3-button w3-right-align">자작나무 냥큐브 구매</a>
-          <a href="https://www.wadiz.kr/web/campaign/detail/123654" class="w3-bar-item w3-button w3-right-align">멀바우 냥큐브 구매</a>
+          <a href="https://smartstore.naver.com/nalssine/products/5618744155" class="w3-bar-item w3-button w3-right-align">냥큐브 구매</a>
+          <!-- <a href="https://www.wadiz.kr/web/campaign/detail/123654" class="w3-bar-item w3-button w3-right-align">자작나무 냥큐브 구매</a>
+          <a href="https://www.wadiz.kr/web/campaign/detail/123654" class="w3-bar-item w3-button w3-right-align">멀바우 냥큐브 구매</a> -->
         </div>
       </div>
   </nav>  
@@ -53,10 +53,10 @@
   </div><br><br>
   
   <div comment="SNS 아이콘" class="w3-center">
-    <button class="w3-btn-floating sns-btn sns-kakao"></button>
-    <button class="w3-btn-floating sns-btn sns-insta"></button>
-    <button class="w3-btn-floating sns-btn sns-youtube"></button>
-    <button class="w3-btn-floating sns-btn sns-link"></button>
+    <a href="http://pf.kakao.com/_PZexiK"><button class="w3-btn-floating sns-btn sns-kakao"></button></a>
+    <a href="https://instagram.com/nalssi_ne"><button class="w3-btn-floating sns-btn sns-insta"></button></a>
+    <a href="https://www.youtube.com/channel/UCXyzNO6d6bd2qgBDthi47Ng"><button class="w3-btn-floating sns-btn sns-youtube"></button></a>
+    <button onclick="copyLinkClicked()" class="w3-btn-floating sns-btn sns-link"></button>
   </div><br><br>
   
   <div comment="슬로건" class="w3-center">
@@ -102,6 +102,7 @@
   
 </main>
 <script>
+  // 슬라이드 인덱스 관련
   const maxIndex = 9;
   let slideIndex = 1;
   showDivs(slideIndex);
@@ -133,13 +134,26 @@
   }
 </script> 
 <script>
-			function w3_open() {
-			  document.getElementById("mySidebar").style.display = "block";
-			}
+  // 슬라이드 보여줌 관련
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
 
-			function w3_close() {
-			  document.getElementById("mySidebar").style.display = "none";
-			}
-		</script>
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+  <script>
+    // 주소 복사 버튼
+    function copyLinkClicked() {
+      navigator.clipboard.writeText("https://nalssine.com")
+        .then(() => {
+        alert("날씨네 URL이 복사 되었습니다.")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+    }
+  </script>
 </body>
 </html>
