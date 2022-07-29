@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <title>날씨네</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +38,13 @@
     padding-left: 60px;
   }
 </style>
-
+<link rel="manifest" href="./manifest.json" />
+<script type="module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+  const el = document.createElement('pwa-update');
+  document.body.appendChild(el);
+</script>
+</head>
 <body style="padding-top: 52px">
   <span class="top-btn w3-xxlarge" onClick="window.scrollTo(0,0);"><i class="fas fa-chevron-circle-up"></i></span>
   <header comment="네비게이션을 상단에 고정하고 브랜드는 왼쪽 나머지 버튼은 오른쪽 정렬">
